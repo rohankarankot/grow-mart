@@ -1,7 +1,7 @@
 import Typography from '@mui/material/Typography';
 import { Box, Divider } from '@mui/material';
-import FormatWithINR from '../../utilities/formatWithINR';
 import { ImageWrapper, ProductContainer, ProductName, ProductPrice } from './ProductCardStyles';
+import FormatWithINR from '../../utilities/FormatWithINR';
 
 export default function ProductCard({ name, price, images }: any) {
     const formattedPrice = FormatWithINR(price)
