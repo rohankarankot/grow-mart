@@ -9,7 +9,6 @@ import ImageSlider from '../Components/ImageSlider/ImageSlider';
 
 export default function Home() {
   const { data, error, loading } = useFetch("https://mern-ecomm-backend.onrender.com/api/v1/products")
-  console.log('data', data, error, loading)
   return (
     <>
       <Head>
