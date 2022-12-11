@@ -11,7 +11,7 @@ const Product = () => {
     const router = useRouter()
     const { product } = router.query
     const { data, error, loading } = useFetch(`https://mern-ecomm-backend.onrender.com/api/v1/product/${product}`)
-    console.log('router', data)
+    console.log('router', data, error)
     const formattedPrice = FormatWithINR(data?.product?.price)
 
     return (
