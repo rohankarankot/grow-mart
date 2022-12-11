@@ -7,7 +7,7 @@ import Navbar from '../../Components/Navbar/Navbar'
 import { Box } from '@mui/system'
 import FormatWithINR from '../../utilities/FormatWithINR'
 
-const product = () => {
+const Product = () => {
     const router = useRouter()
     const { product } = router.query
     const { data, error, loading } = useFetch(`https://mern-ecomm-backend.onrender.com/api/v1/product/${product}`)
@@ -42,4 +42,4 @@ const product = () => {
     )
 }
 
-export default product
+export default Product
