@@ -9,7 +9,7 @@ export default function ProductCard({ _id, name, price, images }: any) {
     const router = useRouter()
 
     return (
-        <ProductContainer onClick={() => router.push(`/Product/${_id}`)} >
+        <ProductContainer onClick={() => router.push(`/product/${_id.toString()}`)} >
             <ImageWrapper src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdm6f8_7LODQAhjhmFZ9CBgl3pegBsI9gFYQ&usqp=CAU" alt="" />
             <Divider />
             <ProductName>

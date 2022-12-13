@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useMemo, useState } from 'react'
 import axios from "axios"
 
 const useFetch = (url: string) => {
@@ -6,10 +6,12 @@ const useFetch = (url: string) => {
   const [loading, setLoading] = useState<boolean>()
   const [error, setError] = useState<any>(null)
 
-  useEffect(() => {
+  useMemo(() => {
     setLoading(true)
     axios.get(url).then((res) => setData(res.data)).catch((err) => setError(err)).finally(() => setLoading(false))
   }, [url])
+
+
   return { data, error, loading }
 }
 

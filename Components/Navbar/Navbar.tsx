@@ -120,7 +120,7 @@ const Navbar = () => {
       <AppBar position="static">
         <Toolbar>
           <Typography
-            sx={{ mr: 2,display: { xs: 'block', sm: 'none' } }}
+            sx={{ mr: 2, display: { xs: 'block', sm: 'none' } }}
           >
             Pshop
           </Typography>

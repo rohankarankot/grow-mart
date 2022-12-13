@@ -3,8 +3,8 @@ import React from "react";
 import Slider from "react-slick";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-import { data as SliderImages } from "../../JSON/SliderImageData.json"
-
+import data from "../../JSON/SliderImageData.json"
+const SliderImages = data?.data;
 export default function ImageSlider() {
     function SampleNextArrow(props: any) {
         const { className, style, onClick } = props;
@@ -63,7 +63,6 @@ export default function ImageSlider() {
         <Box sx={{ paddingX: "10%" }}>
             <Slider {...settings} >
                 {SliderImages.map((img: any, idx: any) => {
-                    { console.log('SliderImages', img.img) }
                     return <Box key={idx} sx={{ padding: "20px" }}><img width={"350px"} height="200px" src={img?.img} alt="" /></Box>
                 })}
             </Slider>
